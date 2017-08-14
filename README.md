@@ -16,7 +16,7 @@ https://www.thenetwork.engineer
 
 
 
-To use Ansible on Juniper devices you need to enable the netconf service on you Juniper device with this command.
+To use Ansible on Juniper devices you need to enable the netconf service on your Juniper device with this command.
 
 # set system services netconf ssh
 

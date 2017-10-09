@@ -20,6 +20,4 @@
       banner: login
       text: "{{ lookup('file', './raw_banner.cfg') }}"
       state: present
-    register: banner  
-    
-  - debug: var=banner.stdout_lines
+

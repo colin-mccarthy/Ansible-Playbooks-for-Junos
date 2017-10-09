@@ -1,0 +1,25 @@
+---
+- hosts: junos
+  gather_facts: no
+  connection: local
+
+  tasks:
+  - name: OBTAIN LOGIN CREDENTIALS
+    include_vars: junos_secrets.yaml
+
+  - name: DEFINE PROVIDER
+    set_fact:
+      provider:
+        host: "{{ inventory_hostname }}"
+        username: "{{ creds['username'] }}"
+        password: "{{ creds['password'] }}"
+
+
+  - name: Configure banner from file
+    junos_banner:
+      banner: login
+      text: "{{ lookup('file', './raw_banner.cfg') }}"
+      state: present
+    register: banner  
+    
+  - debug: var=banner.stdout_lines

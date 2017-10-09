@@ -15,11 +15,12 @@
         password: "{{ creds['password'] }}"
 
 
- - name: Configure banner from file
-   junos_banner:
-     banner: login
-     text: "{{ lookup('file', './raw_banner.cfg') }}"
-     state: present
-   register: banner  
+  - name: Configure banner from file
+    junos_banner:
+      provider: "{{ provider }}"
+      banner: login
+      text: "{{ lookup('file', './raw_banner.cfg') }}"
+      state: present
+    register: banner  
     
   - debug: var=banner.stdout_lines

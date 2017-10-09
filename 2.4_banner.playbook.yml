@@ -14,8 +14,7 @@
         username: "{{ creds['username'] }}"
         password: "{{ creds['password'] }}"
 
-
-  - name: Configure banner from file
+  - name: CONFIG BANNER FROM FILE
     junos_banner:
       provider: "{{ provider }}"
       banner: login

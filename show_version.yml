@@ -5,7 +5,7 @@
 
   tasks:
   - name: OBTAIN LOGIN CREDENTIALS
-    include_vars: junos_secrets.yml
+    include_vars: junos_secrets.yaml
 
   - name: DEFINE PROVIDER
     set_fact:

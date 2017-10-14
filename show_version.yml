@@ -14,6 +14,8 @@
         username: "{{ creds['username'] }}"
         password: "{{ creds['password'] }}"
 
+  - name: Checking NETCONF connectivity
+    wait_for: host={{ inventory_hostname }} port=830  timeout=5
 
   - name: run show version on remote devices
     junos_command:

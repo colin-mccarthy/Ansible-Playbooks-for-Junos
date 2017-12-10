@@ -1,0 +1,27 @@
+- name: PUSH CONFIG TO JUNOS DEVICE
+  hosts: junos
+  connection: local
+  gather_facts: no
+
+  tasks:
+  
+  - name: OBTAIN LOGIN CREDENTIALS
+    include_vars: junos_secrets.yaml
+
+  - name: DEFINE PROVIDER
+    set_fact:
+      provider:
+        host: "{{ inventory_hostname }}"
+        username: "{{ creds['username'] }}"
+        password: "{{ creds['password'] }}"
+
+  - name: Checking NETCONF connectivity
+    wait_for: host={{ inventory_hostname }} port=830  timeout=5
+
+  - name: PUSH CONFIG TO JUNOS DEVIS
+    junos_install_config:
+      file: "configs/{{ inventory_hostname }}.conf"
+      user: "{{ un }}"
+      passwd: "{{ pwd }}"
+      host: "{{ inventory_hostname }}"
+      overwrite: true

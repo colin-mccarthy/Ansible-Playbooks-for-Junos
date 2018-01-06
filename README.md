@@ -12,7 +12,7 @@ git clone https://github.com/colin-mccarthy/Ansible-Playbooks-for-Junos.git
 
 To use Ansible on Juniper devices you need to enable the netconf service on your Juniper device with this command.
 
-'set system services netconf ssh'
+```set system services netconf ssh```
 
 Also I recommend you upgrade to Ansible 2.3 to resolve any issues or bugs you might run into.
 

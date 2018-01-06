@@ -6,7 +6,7 @@ Ansible-Playbooks-for-Junos is a repository of Ansible Playbooks for Juniper dev
 
 To use, download the .zip and extract the contents or clone the repository by typing
 
-git clone https://github.com/colin-mccarthy/Ansible-Playbooks-for-Junos.git
+```git clone https://github.com/colin-mccarthy/Ansible-Playbooks-for-Junos.git```
 
 
 

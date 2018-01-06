@@ -10,15 +10,9 @@ git clone https://github.com/colin-mccarthy/Ansible-Playbooks-for-Junos.git
 
 
 
-There is a video series that details how to use Ansible for Cisco IOS devices that can be found at my website here
-
-https://www.thenetwork.engineer
-
-
-
 To use Ansible on Juniper devices you need to enable the netconf service on your Juniper device with this command.
 
-# set system services netconf ssh
+'''# set system services netconf ssh'''
 
 Also I recommend you upgrade to Ansible 2.3 to resolve any issues or bugs you might run into.
 

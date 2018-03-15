@@ -1,20 +1,9 @@
-- name: PUSH CONFIG TO JUNOS DEVICE
-  hosts: junos
-  connection: local
-  gather_facts: no
+---
+- hosts: junos
+  connection: netconf
+  remote_user: root
 
   tasks:
-  
-  - name: OBTAIN LOGIN CREDENTIALS
-    include_vars: junos_secrets.yaml
-
-  - name: DEFINE PROVIDER
-    set_fact:
-      provider:
-        host: "{{ inventory_hostname }}"
-        username: "{{ creds['username'] }}"
-        password: "{{ creds['password'] }}"
-
   - name: Checking NETCONF connectivity
     wait_for: host={{ inventory_hostname }} port=830  timeout=5
 
@@ -22,4 +11,4 @@
     junos_config:
       src: srx.cfg
       comment: update config
-      provider: "{{ netconf }}"
+

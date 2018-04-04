@@ -1,6 +1,5 @@
 ---
 - hosts: junos
-  remote_user: root
 
   tasks:
   - name: Configure banner from file

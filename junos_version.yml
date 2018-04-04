@@ -1,7 +1,5 @@
 ---
 - hosts: junos
-  connection: netconf
-  remote_user: root
 
   tasks:
   - name: Checking NETCONF connectivity

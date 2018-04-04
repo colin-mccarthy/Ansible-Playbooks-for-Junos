@@ -15,12 +15,6 @@ To use Ansible on Juniper devices you need to enable the netconf service on your
 ```set system services netconf ssh```
 
 
-Good Practices:
-
-I recommend you upgrade to Ansible 2.3 to resolve any issues or bugs you might run into.
-
-Always name your playbooks with a .yml at the end. This is required if you ever want to use your playbooks with Ansible Tower.
-
 
 
 With the network changes in Ansible 2.5 you need to set up your group vars for your Junos group like this.

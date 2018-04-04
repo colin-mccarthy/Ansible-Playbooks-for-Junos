@@ -29,4 +29,6 @@ With the network changes in Ansible 2.5 you need to set up your group vars for y
 ansible_ssh_pass=foo
 remote_user=foo
 ansible_network_os=junos
-ansible_connection=netconf```
+ansible_connection=netconf
+
+```

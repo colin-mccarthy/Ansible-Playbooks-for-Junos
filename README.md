@@ -25,7 +25,8 @@ As of Ansible 2.5 you should add these vars to your group vars
 
 With the network changes in Ansible 2.5 you need to set up your group vars for your Junos group like this.
 
-```ansible_ssh_pass=foo
+```
+ansible_ssh_pass=foo
 remote_user=foo
 ansible_network_os=junos
 ansible_connection=netconf```

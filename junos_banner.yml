@@ -1,6 +1,5 @@
 ---
 - hosts: junos
-  connection: netconf
   remote_user: root
 
   tasks:

@@ -7,3 +7,4 @@
 ansible_ssh_pass=Juniper
 remote_user=root
 ansible_network_os=junos
+ansible_connection=netconf

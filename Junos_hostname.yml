@@ -1,0 +1,18 @@
+---
+- hosts: junos
+  gather_facts: no
+  remote_user: root
+  connection: netconf
+
+  tasks:
+  - name: Checking NETCONF connectivity
+    wait_for: host={{ inventory_hostname }} port=830  timeout=5
+
+
+  - name: change host-name
+    junos_config:
+      update: merge
+      lines:
+      - set system host-name foo
+      comment: "this is a test"
+      confirm: 2

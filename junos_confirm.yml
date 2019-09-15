@@ -1,0 +1,10 @@
+---
+- name: confirm a previous commit
+  hosts: junos
+  gather_facts: no
+
+  tasks:
+
+    - name: confirm commit
+      junos_config:
+        confirm_commit: yes

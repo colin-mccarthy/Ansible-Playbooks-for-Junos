@@ -1,0 +1,12 @@
+---
+- name: check commit playbook
+  hosts: junos
+  gather_facts: no
+
+  tasks:
+
+    - name: ensure correctness of commit configuration
+      junos_config:
+        check_commit: yes
+
+

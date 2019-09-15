@@ -11,5 +11,5 @@
           - set snmp community ansible-public authorization read-only
           - set snmp community ansible-private authorization read-write
           - set snmp community ansibli-test authorization read-write
-        check_commit: yes
-        confirm_commit: no
+      #  check_commit: yes
+      #  confirm_commit: no

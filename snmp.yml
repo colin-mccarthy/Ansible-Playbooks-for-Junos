@@ -1,0 +1,15 @@
+---
+- name: snmp ro/rw string configuration
+  hosts: junos
+  gather_facts: no
+
+  tasks:
+
+    - name: ensure that the desired snmp strings are present
+      junos_config:
+        lines:
+          - set snmp community ansible-public authorization read-only
+          - set snmp community ansible-private authorization read-write
+          - set snmp community ansibli-test authorization read-write
+        check_commit: yes
+        confirm_commit: no

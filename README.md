@@ -20,7 +20,6 @@ To use Ansible on Juniper devices you need to enable the netconf service on your
 With the network changes in Ansible 2.5 you need to set up your group vars for your Junos group like this.
 
 ```
-ansible_ssh_pass=foo
 ansible_network_os=junos
 ansible_connection=netconf
 
